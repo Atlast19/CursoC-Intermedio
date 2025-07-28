@@ -1,17 +1,23 @@
-﻿using ConvertidoTemperaturas.Interface;
-
+﻿
 namespace ConvertidoTemperaturas.Clases
 {
-    public class TemperaturaCelsius : ITemperatura<TemperaturaFahrenhei>
+    public class TemperaturaCelsius 
     {
-        public decimal _temperatura;
+        public decimal temperatura { get; set; }
         public TemperaturaCelsius(decimal temperatura)
         {
-            _temperatura = temperatura;
+            this.temperatura = temperatura;
         }
-        public string Convertidor(TemperaturaFahrenhei F)
+
+
+        public static implicit operator TemperaturaFahrenhei(TemperaturaCelsius C)
         {
-            return $"La temperatura de Celsius a Fahrenhei es {(F._temperatura - 9/5) + 35}° F";
+            decimal fahrenhei = (C.temperatura - 9 / 5) + 35;
+            return new TemperaturaFahrenhei(fahrenhei);
+        }
+        public override string ToString()
+        {
+            return $"La temperatura de Celsius a Fahrenhei es{temperatura}° F";
         }
     }
 }

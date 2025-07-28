@@ -1,6 +1,4 @@
 ﻿using ConvertidoTemperaturas.Clases;
-using ConvertidoTemperaturas.Interface;
-using System.Threading.Channels;
 
 namespace ConvertidoTemperaturas
 {
@@ -9,8 +7,7 @@ namespace ConvertidoTemperaturas
         static void Main(string[] args)
         {
             bool salir = false;
-            TemperaturaFahrenhei fahrenhei = null;
-            TemperaturaCelsius celsius = null; 
+
             Console.WriteLine("Sistema de convercion de temperatura");
             while (!salir)
             {
@@ -26,14 +23,21 @@ namespace ConvertidoTemperaturas
                 
                 if (op == 1) 
                 {
-                    fahrenhei = new TemperaturaFahrenhei(temperatura);
-                    Console.WriteLine(celsius.Convertidor(fahrenhei));
+
+                    TemperaturaFahrenhei fahrenhei = new TemperaturaFahrenhei(temperatura);
+                    TemperaturaCelsius celsius = fahrenhei;
+                    Console.WriteLine(celsius);
+                    Console.WriteLine("");
 
                 }
                 if (op == 2) 
                 {
-                    celsius = new TemperaturaCelsius(temperatura);
-                    Console.WriteLine(fahrenhei.Convertidor(celsius));
+                    
+
+                    TemperaturaCelsius celsius = new TemperaturaCelsius(temperatura);
+                    TemperaturaFahrenhei fahrenhei = celsius;
+                    Console.WriteLine(fahrenhei);
+                    Console.WriteLine("");
                 }
 
 
