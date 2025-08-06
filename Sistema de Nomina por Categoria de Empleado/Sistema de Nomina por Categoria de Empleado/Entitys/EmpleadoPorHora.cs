@@ -18,16 +18,16 @@ namespace Sistema_de_Nomina_por_Categoria_de_Empleado.Entitys
 
         public override void CalcularSalario()
         {
-            int HorasNormales = 40;
+            int HorasTrabajo = 40;
             int horasExtras = HorasTrabajadas - 40;
 
-            if (HorasTrabajadas >= 40)
+            if (HorasTrabajadas > 40)
             {
-                Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || Horas Trabajadas {HorasTrabajadas} || Salario Por Hora: {(SalarioPorHora * HorasNormales) + (horasExtras * SalarioPorHora * 0.05 )}");
+                Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || Horas Trabajadas {HorasTrabajadas} || Salario Por Hora: {(SalarioPorHora * HorasTrabajo) + (horasExtras  * 500)}");
             }
             else 
             {
-                Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || Horas Trabajadas {HorasTrabajadas} || Salario Por Hora: {(SalarioPorHora * HorasTrabajadas) }");
+                Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || Horas Trabajadas {HorasTrabajadas} || Salario Por Hora: {SalarioPorHora * HorasTrabajadas}");
             }
         }
     }

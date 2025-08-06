@@ -1,5 +1,5 @@
 ﻿using Sistema_de_Nomina_por_Categoria_de_Empleado.Entitys.BaseClass;
-
+ 
 
 namespace Sistema_de_Nomina_por_Categoria_de_Empleado.Entitys
 {
@@ -15,7 +15,7 @@ namespace Sistema_de_Nomina_por_Categoria_de_Empleado.Entitys
 
         public override void CalcularSalario()
         {
-            Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || Comicion por Ventas: {Comicion} || Salario Base: {(SalarioBase + Comicion) }");
+            Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || Comicion por Ventas: {Comicion} || Salario Base: {(SalarioBase + Comicion) + 0.1 }");
         }
     }
 }
