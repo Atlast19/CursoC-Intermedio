@@ -17,7 +17,8 @@ namespace Sistema_de_Nomina_por_Categoria_de_Empleado.Entitys
 
         public override void CalcularSalario()
         {
-            Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || Comicion por ventas: {ComicionPorVentas} || Salario por Comicion {SalarioPorComicion + (0.5 * ComicionPorVentas) } ");
+            Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || " +
+                $"Comicion por ventas: {ComicionPorVentas} || Salario por Comicion {SalarioPorComicion + (0.5 * ComicionPorVentas) } ");
         }
     }
 }

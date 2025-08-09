@@ -1,7 +1,5 @@
 ﻿
-
 using Sistema_de_Nomina_por_Categoria_de_Empleado.Entitys.BaseClass;
-
 namespace Sistema_de_Nomina_por_Categoria_de_Empleado.Entitys
 {
     public class EmpleadoPorHora : EmpleadoBase
@@ -14,8 +12,6 @@ namespace Sistema_de_Nomina_por_Categoria_de_Empleado.Entitys
             this.HorasTrabajadas = HorasTrabajadas;
             this.SalarioPorHora = SalarioPorHora;
         }
-
-
         public override void CalcularSalario()
         {
             int HorasTrabajo = 40;
@@ -23,11 +19,13 @@ namespace Sistema_de_Nomina_por_Categoria_de_Empleado.Entitys
 
             if (HorasTrabajadas > 40)
             {
-                Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || Horas Trabajadas {HorasTrabajadas} || Salario Por Hora: {(SalarioPorHora * HorasTrabajo) + (horasExtras  * 500)}");
+                Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} " +
+                    $"|| Horas Trabajadas {HorasTrabajadas} || Salario Por Hora: {(SalarioPorHora * HorasTrabajo) + (horasExtras  * 500)}");
             }
             else 
             {
-                Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} || Horas Trabajadas {HorasTrabajadas} || Salario Por Hora: {SalarioPorHora * HorasTrabajadas}");
+                Console.WriteLine($"ID: {ID} || Nombre: {Nombre} || Departemento: {Departamento} " +
+                    $"|| Horas Trabajadas {HorasTrabajadas} || Salario Por Hora: {SalarioPorHora * HorasTrabajadas}");
             }
         }
     }

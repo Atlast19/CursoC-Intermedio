@@ -2,7 +2,7 @@
 
 namespace Sistema_de_Nomina_por_Categoria_de_Empleado
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
